@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hellomalta-scraper
+    env: node
+    plan: free
+    buildCommand: |
+      npm install
+      npx playwright install --with-deps
+    startCommand: node index.cjs
+    envVars: []
